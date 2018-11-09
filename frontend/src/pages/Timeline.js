@@ -26,12 +26,12 @@ export default class Timeline extends Component {
     const io = socket("http://localhost:3000");
 
     io.on("tweet", data => {
-      this.setState({ tweet: [data, ...this.state.tweets] });
+      this.setState({ tweets: [data, ...this.state.tweets] });
     });
     io.on("like", data => {
       this.setState({
         tweets: this.state.tweets.map(tweet =>
-          tweet._id === data.id ? data : tweet
+          tweet._id === data._id ? data : tweet
         )
       });
     });
