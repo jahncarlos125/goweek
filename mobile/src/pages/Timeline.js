@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import api from "../services/api";
-import socket from 'socket.io-client'
+import socket from "socket.io-client";
 
 import {
   View,
@@ -17,7 +17,7 @@ export default class Timeline extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: "Início",
     headerRight: (
-      <TouchableOpacity onPress={() => navigation.navigate('New')}>
+      <TouchableOpacity onPress={() => navigation.navigate("New")}>
         <Icon
           style={{ marginRight: 10 }}
           name="add-circle-outline"
